@@ -212,6 +212,20 @@ body {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.title-third {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  line-height: 140%;
+  font-weight: 400;
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -238,6 +252,18 @@ body {
 
 .margin-bottom-80px {
   margin-bottom: 8rem;
+}
+
+.margin-bottom-10px {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-30px {
+  margin-bottom: 3rem;
+}
+
+.margin-bottom-50px {
+  margin-bottom: 5rem;
 }
 
 .header {
@@ -271,7 +297,6 @@ body {
 
 .row {
   max-width: 114rem;
-  background: #c25252;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -308,10 +333,71 @@ body {
 }
 
 [class^=col-] {
-  background: green;
   float: left;
 }
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 700;
+  color: #BA8554;
+  text-decoration: none;
+  padding: 1rem;
+  border-bottom: 1px solid #A14F03;
+  display: inline-block;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.btn-text:hover {
+  background-color: #BA8554;
+  color: #FAFAFA;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.composition {
+  position: relative;
+}
+.composition__photo {
+  width: 55%;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  outline-offset: 1rem;
+}
+.composition__photo_n1 {
+  top: 0;
+  left: 0rem;
+}
+.composition__photo_n2 {
+  top: 2rem;
+  right: 0;
+}
+.composition__photo_n3 {
+  top: 13rem;
+  left: 10rem;
+}
+.composition__photo:hover {
+  outline: 1rem solid #BA8554;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  z-index: 20;
+}
+.composition:hover .composition__photo:not(:hover) {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 /*# sourceMappingURL=main.css.map */
