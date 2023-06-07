@@ -295,6 +295,22 @@ body {
   padding-top: 8rem;
 }
 
+.section-adventure {
+  padding: 21rem 0rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.03%, rgba(186, 133, 84, 0.7)), color-stop(99.94%, rgba(0, 0, 0, 0.7))), url(../img/section-adventure.png) center no-repeat;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url(../img/section-adventure.png) center no-repeat;
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+.section-adventure > * {
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.section-tour {
+  padding-top: 21rem;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -399,5 +415,65 @@ body {
 .composition:hover .composition__photo:not(:hover) {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+}
+
+.adventure-card {
+  padding: 2.5rem;
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.adventure-card:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.03);
+          transform: translateY(-1.5rem) scale(1.03);
+}
+.adventure-card__icon {
+  font-size: 6rem;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0.03%, rgba(186, 133, 84, 0.7)), color-stop(99.94%, rgba(161, 79, 3, 0.7)));
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.card-tour {
+  height: 50rem;
+  position: relative;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+}
+.card-tour__side {
+  height: 50rem;
+  -webkit-transition: 0.7s all ease-out;
+  transition: 0.7s all ease-out;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.card-tour__side_front {
+  background: yellow;
+}
+.card-tour__side_back {
+  background: green;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+}
+.card-tour:hover .card-tour__side_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.card-tour:hover .card-tour__side_back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 /*# sourceMappingURL=main.css.map */
