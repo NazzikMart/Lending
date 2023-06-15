@@ -254,6 +254,26 @@ body {
 html {
   font-size: 62.5%;
 }
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 30%;
+  }
+}
+@media (min-width: 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   padding: 5rem;
@@ -819,13 +839,15 @@ body {
 }
 .navigation__button {
   background-color: #FAFAFA;
-  width: 9rem;
-  height: 9rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   position: fixed;
-  top: 7rem;
-  right: 7rem;
+  top: 10rem;
+  right: 10rem;
   z-index: 200;
+  text-align: center;
+  cursor: pointer;
 }
 .navigation__nav {
   height: 100%;
@@ -836,17 +858,17 @@ body {
   z-index: 150;
   opacity: 0;
   width: 0;
-  -webkit-transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  transition: all 0.7s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
 .navigation__background {
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 50%;
   background: radial-gradient(#BA8554, #A14F03);
   position: fixed;
-  right: 8rem;
-  top: 8rem;
+  right: 11rem;
+  top: 11rem;
   z-index: 100;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
@@ -892,5 +914,47 @@ body {
 .navigation__toogle:checked ~ .navigation__nav {
   width: 100%;
   opacity: 1;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 3.7rem;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 3rem;
+  height: 0.2rem;
+  background: #000000;
+  display: inline-block;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.navigation__icon::before {
+  top: -0.8rem;
+}
+.navigation__icon::after {
+  top: 0.8rem;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+}
+.navigation__toogle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toogle:checked + .navigation__button .navigation__icon::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  top: 0;
+}
+.navigation__toogle:checked + .navigation__button .navigation__icon::after {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  top: 0;
 }
 /*# sourceMappingURL=main.css.map */
