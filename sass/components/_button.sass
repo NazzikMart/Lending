@@ -10,7 +10,11 @@
         position: relative
         font-size: 2rem
         border: none
-
+        @include respond(tab-lend)
+            font-size: 1.5rem
+            padding: 1.2rem 3rem
+        @include respond(tab-port)
+            padding: 2rem 5rem
     &:hover
         transform: translateY(-4px)
         box-shadow: $box-shadow

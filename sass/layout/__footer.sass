@@ -8,6 +8,12 @@
         display: inline-block
         &:not(:last-child)
             margin-right: 5rem
+        @include respond(tab-lend)
+            &:not(:last-child)
+                margin-right: 1.6rem
+        @include respond(tab-port)
+            &:not(:last-child)
+                margin: 0 3rem 3rem 0
 
     &__list
         list-style: none
